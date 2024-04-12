@@ -9,6 +9,10 @@
   --font-2: "Monotype Corsiva", sans-serif;
 }
 
+html::-webkit-scrollbar {
+  display: none;
+}
+
 * {
   margin: 0;
   padding: 0;
