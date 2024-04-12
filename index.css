@@ -2,8 +2,8 @@
   --color-1: #ffffff;
   --color-2: #e96c0f;
   --color-3: #ffa612;
-  --heading: 60px;
-  --paragraph: 20px;
+  --heading: 54px;
+  --paragraph: 18px;
   --line-height: 1.8;
   --font-1: "Segoe UI", Arial, sans-serif;
   --font-2: "Monotype Corsiva", sans-serif;
@@ -67,12 +67,12 @@ html::-webkit-scrollbar {
 
 .section-1 {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 
 .section-1 > .video-container {
-  width: 70%;
+  width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -80,9 +80,9 @@ html::-webkit-scrollbar {
 
 .section-1 > .video-container > video {
   width: 100%;
-  height: auto;
   border-radius: 10px;
   border: 3px solid var(--color-3);
+  object-fit: cover;
 }
 
 .section-1 > .text-container {
@@ -117,9 +117,11 @@ html::-webkit-scrollbar {
   height: 40%;
   width: 90%;
   margin-bottom: 50px;
+  flex: 1;
 }
 
 .section-2 > .grid-container-2 {
+  flex: 1;
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   gap: 20px;
@@ -128,7 +130,7 @@ html::-webkit-scrollbar {
 }
 
 .section-2 .grid-item {
-  height: 100%;
+  width: 100%;
   border-radius: 10px;
   border: 2px solid var(--color-3);
   background-color: black;
@@ -158,8 +160,7 @@ html::-webkit-scrollbar {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
-  padding: 50px 80px;
+  align-items: center;
   font-family: var(--font-1);
 }
 
@@ -312,17 +313,17 @@ html::-webkit-scrollbar {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 20px;
-  height: 40%;
+  height: 30%;
   width: 90%;
   margin: 0 auto;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
 }
 
 .section-5 > .grid-container-2 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
-  height: 40%;
+  height: 30%;
   width: 90%;
   margin: 0 auto;
 }
@@ -337,11 +338,25 @@ html::-webkit-scrollbar {
 
 .section-5 .grid-item {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   color: white;
   font-family: var(--font-1);
+}
+
+.section-5 .grid-item div {
+  width: 150px !important;
+  height: 150px !important;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10%;
+}
+
+.section-5 .grid-item .profile-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .section-5 .grid-item > h1 {
@@ -354,7 +369,7 @@ html::-webkit-scrollbar {
   line-height: var(--line-height);
 }
 
-.section-5 .grid-item > a {
+.section-5 .grid-item a {
   color: var(--color-2);
   font-size: 20px;
 }
