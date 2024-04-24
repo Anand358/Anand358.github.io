@@ -1,29 +1,16 @@
-// let currOffset = 0;
+function changeItem() {
+  const radios = document.querySelectorAll('input[name="slider"]');
+  let currentIndex = Array.from(radios).findIndex((radio) => radio.checked);
 
-// document.addEventListener("keydown", function (event) {
-//   if (event.key === "ArrowUp") {
-//     event.preventDefault();
-//     const currentSection = document.querySelector(".section.active");
-//     const previousSection = currentSection.previousElementSibling;
-//     if (previousSection) {
-//       currentSection.classList.remove("active");
-//       previousSection.classList.add("active");
-//       window.scrollTo({
-//         left: previousSection.offsetLeft,
-//         behavior: "smooth",
-//       });
-//     }
-//   } else if (event.key === "ArrowDown") {
-//     event.preventDefault();
-//     const currentSection = document.querySelector(".section.active");
-//     const nextSection = currentSection.nextElementSibling;
-//     if (nextSection) {
-//       currentSection.classList.remove("active");
-//       nextSection.classList.add("active");
-//       window.scrollTo({
-//         top: 250,
-//         behavior: "smooth",
-//       });
-//     }
-//   }
-// });
+  // Uncheck current item
+  radios[currentIndex].checked = false;
+
+  // Increment index or loop back to the first item if at the end
+  currentIndex = (currentIndex + 1) % radios.length;
+
+  // Check next item
+  radios[currentIndex].checked = true;
+}
+
+// Periodically change the checked item every 1 second
+setInterval(changeItem, 3000);
