@@ -856,7 +856,7 @@ html::-webkit-scrollbar {
 
   .section-2 {
     align-items: center;
-    padding-bottom: 200px;
+    padding-bottom: 100px;
   }
 
   .section-2 > .grid-container {
@@ -870,7 +870,6 @@ html::-webkit-scrollbar {
     justify-content: center;
     font-family: "DM Sans", sans-serif;
     transition: background 0.4s ease-in;
-    height: 100vh;
     width: 100vw;
     padding: 50px 0;
   }
@@ -882,7 +881,6 @@ html::-webkit-scrollbar {
     font-weight: 400;
     font-family: "Poppins";
     text-align: right;
-    margin-top: 80px;
   }
 
   .section-2 > .container > .carousel-container {
