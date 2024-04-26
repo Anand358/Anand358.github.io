@@ -164,18 +164,18 @@ html::-webkit-scrollbar {
   z-index: 1;
 }
 
-.section-1 > .row-3 > .triangle {
+.section-1 > .row-3 .triangle {
   position: relative;
   margin-left: -10px;
 }
 
-.section-1 > .row-3 > .triangle > .text-container {
+.section-1 > .row-3 .triangle > .text-container {
   position: absolute;
   top: 40px;
   left: 20px;
 }
 
-.section-1 > .row-3 > .triangle > .text-container > h2 {
+.section-1 > .row-3 .triangle > .text-container > h2 {
   font-size: 36px;
   letter-spacing: -1px;
   text-transform: uppercase;
@@ -184,7 +184,7 @@ html::-webkit-scrollbar {
   font-family: "Poppins";
 }
 
-.section-1 > .row-3 > .triangle > .text-container > p {
+.section-1 > .row-3 .triangle > .text-container > p {
   font-size: 30px;
   color: #ffffff;
   font-weight: 400;
@@ -202,33 +202,27 @@ html::-webkit-scrollbar {
 
 .section-2 > .grid-container {
   display: grid;
-  grid-template-columns: repeat(7, minmax(0, 1fr));
+  grid-template-columns: repeat(6, minmax(0, 1fr));
   grid-template-rows: repeat(2, minmax(0, 1fr));
-  gap: 20px;
+  gap: 30px;
   padding: 0 100px;
   margin-bottom: 50px;
   flex: 1;
 }
 
 .section-2 .grid-item {
-  width: 100%;
   border-radius: 10px;
   border: 2px solid var(--color-3);
-  background-color: black;
-}
-
-.section-2 .grid-item > img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 10px;
+  position: relative;
 }
 
 .section-2 .grid-item > iframe {
   width: 100%;
   height: 100%;
-  object-fit: cover;
   border-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .section-2 .grid-item-hidden {
@@ -590,6 +584,8 @@ html::-webkit-scrollbar {
 
   .section-2 > .grid-container {
     padding: 0;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-template-rows: repeat(3, minmax(0, fit-content));
   }
 
   .section-4 > .container-2 > .row > .member-card {
@@ -609,8 +605,8 @@ html::-webkit-scrollbar {
 
   .section-2 > .grid-container {
     padding: 0;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-    grid-template-rows: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-rows: repeat(3, minmax(0, fit-content));
   }
 
   .section-3 > .text-container {
@@ -757,6 +753,7 @@ html::-webkit-scrollbar {
   .section-2 > .grid-container {
     padding: 0;
     grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: repeat(4, minmax(0, 300px));
   }
 
   .section-2 > .grid-container > .grid-item-large {
@@ -859,6 +856,7 @@ html::-webkit-scrollbar {
 
   .section-2 {
     align-items: center;
+    padding-bottom: 200px;
   }
 
   .section-2 > .grid-container {
@@ -884,6 +882,7 @@ html::-webkit-scrollbar {
     font-weight: 400;
     font-family: "Poppins";
     text-align: right;
+    margin-top: 80px;
   }
 
   .section-2 > .container > .carousel-container {
@@ -893,7 +892,7 @@ html::-webkit-scrollbar {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 60px 0;
+    margin: 100px 0;
   }
 
   .section-2 > .container > .carousel-container > input[type="radio"] {
@@ -903,7 +902,7 @@ html::-webkit-scrollbar {
   .section-2 > .container > .carousel-container > .cards {
     position: relative;
     width: 100%;
-    height: 100%;
+    height: 500px;
     margin-bottom: 20px;
   }
   .section-2 > .container > .carousel-container > .cards > .card {
@@ -931,16 +930,13 @@ html::-webkit-scrollbar {
     object-fit: cover;
   }
 
-  #item-1:checked ~ .cards #label-10,
+  #item-1:checked ~ .cards #label-7,
   #item-2:checked ~ .cards #label-1,
   #item-3:checked ~ .cards #label-2,
   #item-4:checked ~ .cards #label-3,
   #item-5:checked ~ .cards #label-4,
   #item-6:checked ~ .cards #label-5,
-  #item-7:checked ~ .cards #label-6,
-  #item-8:checked ~ .cards #label-7,
-  #item-9:checked ~ .cards #label-8,
-  #item-10:checked ~ .cards #label-9 {
+  #item-7:checked ~ .cards #label-6 {
     transform: translatex(-90%) scale(0.8);
     opacity: 0.4;
     z-index: 0;
@@ -952,10 +948,7 @@ html::-webkit-scrollbar {
   #item-4:checked ~ .cards #label-5,
   #item-5:checked ~ .cards #label-6,
   #item-6:checked ~ .cards #label-7,
-  #item-7:checked ~ .cards #label-8,
-  #item-8:checked ~ .cards #label-9,
-  #item-9:checked ~ .cards #label-10,
-  #item-10:checked ~ .cards #label-1 {
+  #item-7:checked ~ .cards #label-1 {
     transform: translatex(90%) scale(0.8);
     opacity: 0.4;
     z-index: 0;
@@ -967,10 +960,7 @@ html::-webkit-scrollbar {
   #item-4:checked ~ .cards #label-4,
   #item-5:checked ~ .cards #label-5,
   #item-6:checked ~ .cards #label-6,
-  #item-7:checked ~ .cards #label-7,
-  #item-8:checked ~ .cards #label-8,
-  #item-9:checked ~ .cards #label-9,
-  #item-10:checked ~ .cards #label-10 {
+  #item-7:checked ~ .cards #label-7 {
     transform: translatex(0) scale(1);
     opacity: 1;
     z-index: 1;
@@ -990,7 +980,6 @@ html::-webkit-scrollbar {
     align-items: center;
     font-family: var(--font-1);
     padding: 0 50px;
-    margin-bottom: 80px;
   }
 
   .section-2 > .container > .description > h1 {
@@ -1046,13 +1035,13 @@ html::-webkit-scrollbar {
     margin-left: -130px;
   }
 
-  .section-5 > .container{
+  .section-5 > .container {
     flex-direction: column;
     width: 100%;
     align-items: center;
   }
 
-  .section-5 > .container > .vertical-line{
+  .section-5 > .container > .vertical-line {
     display: none;
   }
 
@@ -1064,7 +1053,7 @@ html::-webkit-scrollbar {
     margin: 30px 0;
   }
 
-  .section-5 > .container > .contact{
+  .section-5 > .container > .contact {
     align-self: center;
   }
 
